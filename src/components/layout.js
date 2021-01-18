@@ -29,12 +29,12 @@ const Layout = ({ homePage, children }) => {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <Header
         toggle={toggle}
-        siteTitle={data.site.siteMetadata?.title || `Title`}
+        siteTitle={data.site.siteMetadata?.title || `JMSD Films`}
         homePage={homePage}
       />
       <div>
         <main className="mt-20">{children}</main>
-        <Footer author={data.site.siteMetadata?.author || "Author"} />
+        <Footer siteTitle={data.site.siteMetadata?.title || `JMSD Films`} />
       </div>
     </>
   )

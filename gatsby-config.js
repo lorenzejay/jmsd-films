@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Wedding Studio`,
+    title: `JMSD Films`,
     description: `Los Angeles Wedding Photography and Videography studio. Your story, our camera. Let us capture your adventure.`,
-    author: `Wedding Studio Example`,
+    author: `Uplift Digital Solutions`,
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: `packages_json`,
         path: `./src/data/packages.json`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `vidoes_json`,
+        path: `./src/data/videos.json`,
       },
     },
     {

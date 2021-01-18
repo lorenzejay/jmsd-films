@@ -13,8 +13,8 @@ const Testimonial = () => {
     slidesToScroll: 1,
   }
   return (
-    <div className="my-5 p-5 ">
-      <h2 className="text-4xl text-center">What our clients have said</h2>
+    <div className="my-12 p-5 mb-32">
+      <h2 className="text-4xl text-center mb-12">What our clients have said</h2>
       <Slider
         {...settings}
         className="w-5/6 mx-auto text-black border-none box shadow-none outline-none"
