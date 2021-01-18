@@ -16,7 +16,7 @@ const IndexPage = () => (
     <VideoGallery />
     <VideoStrip />
     <Testimonial />
-    <ContactUs />
+    <ContactUs isPage={false} />
   </Layout>
 )
 

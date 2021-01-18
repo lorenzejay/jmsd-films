@@ -26,7 +26,7 @@ const Contact = () => {
             We love to hear your story
           </h3>
         </div>
-        <ContactUs className="" />
+        <ContactUs isPage={true} />
 
         {/* <VideoStrip /> */}
       </div>
