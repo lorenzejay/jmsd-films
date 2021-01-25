@@ -1,20 +1,20 @@
 import React from "react"
-import { FaYoutube, FaInstagram, FaVimeo } from "react-icons/fa"
+import { FaLinkedin, FaInstagram, FaVimeo } from "react-icons/fa"
 // import Instagrid from "./instagrid"
 
 const Footer = ({ siteTitle }) => {
   return (
-    <footer className="mt-12 bg-gray-300  flex flex-col justify-center items-center w-full h-48">
+    <footer className="mt-12 bg-gray-100  flex flex-col justify-center items-center w-full h-48">
       <div className="flex flex-col items-center justify-around gap-2 w-full">
         <div className="flex  justify-center ">
           <a href="https://www.youtube.com/">
-            <FaYoutube size={24} className="m-5" />
+            <FaLinkedin size={24} className="m-5  text-blue-500" />
           </a>
           <a href="https://www.instagram.com/">
             <FaInstagram size={24} className="m-5" />
           </a>
           <a href="https://www.vimeo.com">
-            <FaVimeo size={24} className="m-5" />
+            <FaVimeo size={24} className="m-5 text-blue-400" />
           </a>
         </div>
         <hr className="border-black h-3 z-10" />

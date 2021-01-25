@@ -4,7 +4,9 @@ import styled from "styled-components"
 export const Form = styled.form`
   -webkit-appearance: none;
   input,
+  select,
   textarea {
+    width: 100%;
     -webkit-appearance: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) !important;
     border-radius: 4px;
@@ -16,6 +18,7 @@ export const Form = styled.form`
 const ContactUs = ({ isPage }) => {
   const todayDate = new Date().toISOString().slice(0, 10)
   const [currentDate, setCurrentDate] = useState(todayDate)
+  const [preferedPackage, setPreferedPackage] = useState("")
   return (
     <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
       <input type="hidden" name="bot-field" />
@@ -39,6 +42,12 @@ const ContactUs = ({ isPage }) => {
         name="email"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
+      <input
+        type="text"
+        placeholder="Phone Number"
+        name="Phone Number"
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+      />
 
       <label className="mr-auto" htmlFor="date">
         Wedding Date
@@ -50,6 +59,26 @@ const ContactUs = ({ isPage }) => {
         name="date"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
+      <input
+        type="text"
+        placeholder="Location"
+        name="Location"
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+      />
+      <label for="cars" className="mr-auto">
+        Choose a package:
+      </label>
+
+      <select
+        name="package"
+        id="package"
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+      >
+        <option value="Video">Video</option>
+        <option value="Indie">Indie</option>
+        <option value="Video">Video</option>
+        <option value="Hollywood">Hollywood</option>
+      </select>
 
       <textarea
         rows="5"
@@ -57,7 +86,7 @@ const ContactUs = ({ isPage }) => {
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
       <button
-        className="bg-gray-700 w-full rounded text-white py-1 uppercase"
+        className="bg-gray-900 w-full rounded text-white py-1 uppercase"
         type="submit"
       >
         Submit

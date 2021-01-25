@@ -2,35 +2,50 @@
   {
     "id": 1,
     "title": "Video",
-    "price": 1600,
+    "price": 2000,
     "details": [
-      "6 Hour Coverage",
+      "Offered Mondays - Thursday",
       "1 Cinematographer",
-      "3-6 Minute Highlight Film"
+      "3-5 Minute Highlight Film"
     ]
   },
   {
     "id": 2,
-    "title": "Cine",
-    "price": 2600,
+    "title": "Indie",
+    "price": 3000,
     "details": [
-      "8 Hour Coverage",
       "2 Cinematographers",
       "3-6 Minute Highlight Film",
-      "Drone Footage",
-      "All Raw Files"
+      "Short Film (3-5 minutes)",
+      "Feature Film (15 - 16 minutes)",
+      "1 Minute Social Media Teaser Video",
+      "Digital Download"
     ]
   },
   {
     "id": 3,
-    "title": "Hollywood",
-    "price": 3600,
+    "title": "Cine",
+    "price": 3450,
     "details": [
-      "10 Hour Coverage",
-      "2 Cinematographer",
+      "2 Cinematographers",
       "3-6 Minute Highlight Film",
-      "Drone Footage",
-      "Full Movie"
+      "Short Film (3-5 minutes)",
+      "Feature Film (15 - 16 minutes)",
+      "1 Minute Social Media Teaser Video",
+      "Digital Download"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Hollywood",
+    "price": 4000,
+    "details": [
+      "2 Cinematographers",
+      "3-6 Minute Highlight Film",
+      "Short Film (5-7 minutes)",
+      "Documentary Film (45 minutes - 1 hour)",
+      "1 Minute Social Media Teaser Video",
+      "Digital Download and USB Delivery"
     ]
   }
 ]

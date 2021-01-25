@@ -8,3 +8,7 @@
 .slick-next:before {
   color: black !important;
 }
+
+.player {
+  position: "" !important;
+}

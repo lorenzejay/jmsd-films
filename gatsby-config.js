@@ -12,24 +12,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `galleries_json`,
-        path: `./src/data/galleries.json`,
+        path: `./src/data`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `packages_json`,
-        path: `./src/data/packages.json`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `videos_json`,
-        path: `./src/data/videos.json`,
-      },
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

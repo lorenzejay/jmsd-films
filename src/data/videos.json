@@ -6,12 +6,27 @@
   },
   {
     "id": 2,
+    "videoSrc": "https://player.vimeo.com/video/494044529?title=0&byline=0&portrait=0",
+    "title": "Lizette + Christian"
+  },
+  {
+    "id": 3,
     "videoSrc": "https://player.vimeo.com/video/376493904?title=0&byline=0&portrait=0",
     "title": "Jasmin + Daniel"
   },
   {
-    "id": 3,
+    "id": 4,
+    "videoSrc": "https://player.vimeo.com/video/364227154?title=0&byline=0&portrait=0",
+    "title": "Brenda + Eddy"
+  },
+  {
+    "id": 5,
     "videoSrc": "https://player.vimeo.com/video/384598339?title=0&byline=0&portrait=0",
     "title": "Reneice + Daniele"
+  },
+  {
+    "id": 6,
+    "videoSrc": "https://player.vimeo.com/video/405273839?title=0&byline=0&portrait=0",
+    "title": "Marianne + Justin"
   }
 ]

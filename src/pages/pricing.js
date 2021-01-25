@@ -1,10 +1,19 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+import StyledBackgroundSection from "../components/imageHero"
 import Layout from "../components/layout"
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
     query Pricing {
+      desktop: file(relativePath: { eq: "flowers.jpg" }) {
+        childImageSharp {
+          fluid(quality: 60, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+
       allPackagesJson {
         nodes {
           id
@@ -15,23 +24,24 @@ const Pricing = () => {
       }
     }
   `)
+  const imageData = data.desktop.childImageSharp.fluid
   // console.log(data.allPackagesJson.nodes)
   return (
     <Layout>
-      <div className="min-h-screen text-white">
-        <div className="hero bg-gray-700 min-h-48 flex flex-col items-center p-10 md:min-h-72 md:justify-center">
-          <h1 className="text-3xl text-center my-5 md:text-5xl font-bold">
-            Wedding Videography Packages
-          </h1>
-          <p className="leading-relaxed md:w-3/4">
-            Our videograohy packages are focuses on develiering cinematic
-            wedding films that tell a story of your special day. The fuilmsa re
-            3-6 minutes long and will be delivered between 4 - 6 weeks after the
-            wedding. Lenght of the film depends on the size if your weddin,
-            number of hours you've hired us for and the amount of events that
-            occurred throught the day. See below packages specifics
-          </p>
-        </div>
+      <div className="min-h-screen text-black">
+        <StyledBackgroundSection
+          className=""
+          imageSrc={imageData}
+          title={"Packages"}
+        />
+        <p className="leading-relaxed md:w-3/4 my-5 px-5 text-sm md:mx-auto md:mt-20 text-center md:text-2xl">
+          Our videography packages are focuses on delivering cinematic wedding
+          films that tell a story of your special day. The movies are 3-7
+          minutes long (depending on the package selected) and delivered within
+          90 days after the wedding date. We will cover your wedding for a
+          standard of 8 hours across all packages. If you would like to extend
+          us, we would happily arrange that. See below packages specifics.
+        </p>
 
         <div className="text-gray-700 flex flex-col justify-center md:flex-row md:justify-around py-10 md:mt-24">
           {data.allPackagesJson.nodes.map(item => (
@@ -47,7 +57,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <Link to="/contact" className="mt-3">
-                <button className="bg-blue-500 rounded px-5 py-1 text-white">
+                <button className="bg-gray-900 rounded px-5 py-1 text-white">
                   Book Now
                 </button>
               </Link>

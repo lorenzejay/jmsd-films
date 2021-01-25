@@ -1,5 +1,5 @@
 import React from "react"
-import DroneShot from "../videos/cDroneClip.mp4"
+import DroneShot from "../videos/DroneFootage.mp4"
 const VideoStrip = () => {
   return (
     <div className="videostrip w-full h-28 p-0 mx-0 my-20 sm:h-36">

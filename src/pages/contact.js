@@ -4,6 +4,7 @@ import ContactUs from "../components/contactUs"
 import Layout from "../components/layout"
 import VideoStrip from "../components/videoStrip"
 import StyledBackgroundSection from "../components/imageHero"
+import { graphql, useStaticQuery } from "gatsby"
 export const Form = styled.form`
   -webkit-appearance: none;
   input,
@@ -17,10 +18,28 @@ export const Form = styled.form`
 `
 
 const Contact = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "covers/cover1.jpg" }) {
+          childImageSharp {
+            fluid(quality: 60, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+  const imageData = data.desktop.childImageSharp.fluid
   return (
     <Layout>
       <div className="">
-        <StyledBackgroundSection className="" />
+        <StyledBackgroundSection
+          className=""
+          imageSrc={imageData}
+          title={"Contact Us"}
+        />
         <div>
           <h3 className="text-center my-12 text-3xl px-5">
             We love to hear your story

@@ -6,7 +6,7 @@ import styled from "styled-components"
 
 export const Nav = styled.header`
   //handle transitions here
-  background: #000;
+  background: #fff;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -30,7 +30,7 @@ export const NavContainer = styled.div`
 
 //we are grabbing the link from gatsby link
 export const NavLink = styled(LinkG)`
-  color: #ffffff;
+  color: #000;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -53,7 +53,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 85%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: #000;
   }
 `
 export const NavMenu = styled.ul`
@@ -74,7 +74,7 @@ export const NavItem = styled.li`
 
 //scroll links
 export const NavLinks = styled(LinkG)`
-  color: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   text-decoration: none;

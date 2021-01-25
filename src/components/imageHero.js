@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
@@ -17,34 +16,17 @@ export const Overlay = styled.div`
   cursor: pointer; /* Add a pointer on hover */
 `
 
-const BackgroundSection = ({ className }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        desktop: file(relativePath: { eq: "covers/cover1.jpg" }) {
-          childImageSharp {
-            fluid(quality: 60, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  )
-
-  // Set ImageData.
-  const imageData = data.desktop.childImageSharp.fluid
-
+const BackgroundSection = ({ title, imageSrc }) => {
   return (
     <BackgroundImage
       Tag="section"
-      className="bg-gray-700 min-h-48 flex flex-col items-center p-10 md:min-h-72 md:justify-center"
-      fluid={imageData}
+      className="bg-gray-700 min-h-48 flex flex-col items-center p-10 md:h-72 md:justify-center"
+      fluid={imageSrc}
       backgroundColor={`#040e18`}
     >
       <Overlay className="overlay hover:inline-block "></Overlay>
-      <h2 className="uppercase text-white text-4xl text-center my-8 text-center font-semibold z-10">
-        Contact Us
+      <h2 className="uppercase text-white text-4xl text-center my-8 font-semibold z-10">
+        {title}
       </h2>
     </BackgroundImage>
   )
