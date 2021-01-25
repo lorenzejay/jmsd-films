@@ -43,7 +43,7 @@ const Pricing = () => {
           us, we would happily arrange that. See below packages specifics.
         </p>
 
-        <div className="text-gray-700 flex flex-col justify-center md:flex-row md:justify-around py-10 md:mt-24">
+        <div className="text-gray-700 flex flex-col justify-center lg:flex-row md:justify-around py-10 md:mt-24">
           {data.allPackagesJson.nodes.map(item => (
             <div key={item.id} className="text-center my-5">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>

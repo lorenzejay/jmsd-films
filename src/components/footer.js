@@ -7,13 +7,25 @@ const Footer = ({ siteTitle }) => {
     <footer className="mt-12 bg-gray-100  flex flex-col justify-center items-center w-full h-48">
       <div className="flex flex-col items-center justify-around gap-2 w-full">
         <div className="flex  justify-center ">
-          <a href="https://www.youtube.com/">
+          <a
+            href="https://www.linkedin.com/in/johnmarkdatingaling/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaLinkedin size={24} className="m-5  text-blue-500" />
           </a>
-          <a href="https://www.instagram.com/">
+          <a
+            href="https://www.instagram.com/jmsdfilms/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaInstagram size={24} className="m-5" />
           </a>
-          <a href="https://www.vimeo.com">
+          <a
+            href="https://vimeo.com/jmsdfilms"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaVimeo size={24} className="m-5 text-blue-400" />
           </a>
         </div>
