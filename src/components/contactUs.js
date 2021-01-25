@@ -65,7 +65,7 @@ const ContactUs = ({ isPage }) => {
         name="Location"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
-      <label for="cars" className="mr-auto">
+      <label htmlFor="cars" className="mr-auto">
         Choose a package:
       </label>
 

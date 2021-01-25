@@ -12,10 +12,10 @@ export const EmbededContainer = styled.div`
 const Video = ({ videoSrc, title }) => {
   return (
     <EmbededContainer
-    // className="w-full relative my-5 flex items-center justify-center text-center"
-    // style={{
-    //   paddingTop: "56.25%",
-    // }}
+      className="w-full relative my-5 flex items-center justify-center text-center"
+      // style={{
+      //   paddingTop: "56.25%",
+      // }}
     >
       <iframe
         style={{
