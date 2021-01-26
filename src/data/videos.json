@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "videoSrc": "https://player.vimeo.com/video/380106142?title=0&byline=0&portrait=0",
-    "title": "Anna + Brian"
+    "videoSrc": "https://player.vimeo.com/video/494044529?title=0&byline=0&portrait=0",
+    "title": "Lizette + Christian"
   },
   {
     "id": 2,
-    "videoSrc": "https://player.vimeo.com/video/494044529?title=0&byline=0&portrait=0",
-    "title": "Lizette + Christian"
+    "videoSrc": "https://player.vimeo.com/video/380106142?title=0&byline=0&portrait=0",
+    "title": "Anna + Brian"
   },
   {
     "id": 3,
@@ -23,10 +23,5 @@
     "id": 5,
     "videoSrc": "https://player.vimeo.com/video/384598339?title=0&byline=0&portrait=0",
     "title": "Reneice + Daniele"
-  },
-  {
-    "id": 6,
-    "videoSrc": "https://player.vimeo.com/video/405273839?title=0&byline=0&portrait=0",
-    "title": "Marianne + Justin"
   }
 ]

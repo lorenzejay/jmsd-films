@@ -15,7 +15,7 @@ export const Form = styled.form`
   }
 `
 
-const ContactUs = ({ isPage }) => {
+const ContactUs = () => {
   const todayDate = new Date().toISOString().slice(0, 10)
   const [currentDate, setCurrentDate] = useState(todayDate)
   const [preferedPackage, setPreferedPackage] = useState("")
@@ -23,16 +23,23 @@ const ContactUs = ({ isPage }) => {
     <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
-      {!isPage && (
-        <h1 className="uppercase text-4xl text-center mb-12">
-          We'd love to hear your story
-        </h1>
-      )}
+      {
+        <>
+          <h1 className="uppercase text-4xl text-center mb-12">Say Hello</h1>
+          <p className="mb-5">
+            If you don't hear from us during the weekend, do not worry. We're
+            just out and about covering a wedding. We'll get back to you on
+            Monday! Promise! If you need to reach us via email:{" "}
+            <a href="mailto:johnmark@jmsdfilms.com">johnmark@jmsdfilms.com</a>
+          </p>
+        </>
+      }
 
       <input
         type="text"
         placeholder="Name"
         name="name"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
 
@@ -40,11 +47,13 @@ const ContactUs = ({ isPage }) => {
         type="email"
         placeholder="Email"
         name="email"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
       <input
         type="text"
         placeholder="Phone Number"
+        required
         name="Phone Number"
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
@@ -54,15 +63,24 @@ const ContactUs = ({ isPage }) => {
       </label>
       <input
         type="date"
-        value={currentDate}
         onChange={e => setCurrentDate(e.target.value)}
+        value={currentDate}
         name="date"
+        required
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
+      />
+      <input
+        type="text"
+        name="instagram"
+        placeholder="Instagram"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
       <input
         type="text"
         placeholder="Location"
         name="Location"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
       <label htmlFor="cars" className="mr-auto">
@@ -72,6 +90,7 @@ const ContactUs = ({ isPage }) => {
       <select
         name="package"
         id="package"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       >
         <option value="Video">Video</option>
@@ -83,6 +102,7 @@ const ContactUs = ({ isPage }) => {
       <textarea
         rows="5"
         placeholder="Tell us your story"
+        required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
       <button

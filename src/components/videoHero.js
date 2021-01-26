@@ -20,12 +20,9 @@ const VideoHero = () => {
         playsInline
       />
       <div className="absolute top-1/3 mt-20 left-0 z-10 w-full m-auto text-center px-3">
-        <h1 className="text-4xl uppercase mb-20 font-thin">
+        <h1 className="text-2xl lg:text-4xl uppercase mb-20 font-semi-bold lg:w-3/4 mx-auto">
           Let us capture your love through our passion of storytelling.
         </h1>
-        <p className="text-xl hidden sm:inline-block">
-          Creating a memory that will last a lifetime.
-        </p>
       </div>
     </Hero>
   )

@@ -1,8 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: `JMSD Films`,
-    description: `Los Angeles Wedding Photography and Videography studio. Your story, our camera. Let us capture your adventure.`,
+    defaultTitle: `Los Angeles California Wedding Video Studio | JMSD Films.`,
     author: `Uplift Digital Solutions`,
+    description: `Los Angeles Wedding Video studio. We create films driven by emotion and aim to capture the
+        couple's essence on their special day.`,
+    defaultDescription: `Los Angeles Wedding Video studio. We create films driven by emotion and aim to capture the
+        couple's essence on their special day.`,
+
+    url: "https://jmsdfilms.com/",
+    siteUrl: "https://jmsdfilms.com/",
+    image: "/images/jmsdlogo.png",
+    defaultImage: "/images/jmsdlogo.png",
   },
   plugins: [
     `gatsby-transformer-json`,
@@ -34,7 +43,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/jmsdlogo.png`, // This path is relative to the root of the site.
       },
     },
     {

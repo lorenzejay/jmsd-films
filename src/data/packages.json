@@ -15,36 +15,32 @@
     "price": 3000,
     "details": [
       "2 Cinematographers",
-      "3-6 Minute Highlight Film",
       "Short Film (3-5 minutes)",
-      "Feature Film (15 - 16 minutes)",
-      "1 Minute Social Media Teaser Video",
+      "Ceremony & Toast Film",
+      "1 Minute Social Media Teaser",
       "Digital Download"
     ]
   },
   {
     "id": 3,
-    "title": "Cine",
+    "title": "Cine - 4k",
     "price": 3450,
     "details": [
       "2 Cinematographers",
-      "3-6 Minute Highlight Film",
-      "Short Film (3-5 minutes)",
-      "Feature Film (15 - 16 minutes)",
-      "1 Minute Social Media Teaser Video",
+      "Feature Film (10 - 15 minutes)",
+      "1 Minute Social Media Teaser",
       "Digital Download"
     ]
   },
   {
     "id": 4,
-    "title": "Hollywood",
+    "title": "Hollywood - 4k",
     "price": 4000,
     "details": [
       "2 Cinematographers",
-      "3-6 Minute Highlight Film",
       "Short Film (5-7 minutes)",
       "Documentary Film (45 minutes - 1 hour)",
-      "1 Minute Social Media Teaser Video",
+      "1 Minute Social Media Teaser",
       "Digital Download and USB Delivery"
     ]
   }

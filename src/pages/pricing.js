@@ -2,6 +2,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import StyledBackgroundSection from "../components/imageHero"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Pricing = () => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const Pricing = () => {
   // console.log(data.allPackagesJson.nodes)
   return (
     <Layout>
+      <SEO title="Pricing | Los Angeles Film Studio" />
       <div className="min-h-screen text-black">
         <StyledBackgroundSection
           className=""

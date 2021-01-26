@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import ContactUs from "../components/contactUs"
 import Layout from "../components/layout"
-import VideoStrip from "../components/videoStrip"
+// import VideoStrip from "../components/videoStrip"
 import StyledBackgroundSection from "../components/imageHero"
 import { graphql, useStaticQuery } from "gatsby"
+import SEO from "../components/seo"
 export const Form = styled.form`
   -webkit-appearance: none;
   input,
@@ -21,7 +22,7 @@ const Contact = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "covers/cover1.jpg" }) {
+        desktop: file(relativePath: { eq: "header.jpg" }) {
           childImageSharp {
             fluid(quality: 60, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
@@ -34,17 +35,16 @@ const Contact = () => {
   const imageData = data.desktop.childImageSharp.fluid
   return (
     <Layout>
+      <SEO
+        title={"Connect With Us | Los Angeles California Wedding Film Studio"}
+      />
       <div className="">
         <StyledBackgroundSection
           className=""
           imageSrc={imageData}
           title={"Contact Us"}
         />
-        <div>
-          <h3 className="text-center my-12 text-3xl px-5">
-            We love to hear your story
-          </h3>
-        </div>
+
         <ContactUs isPage={true} />
 
         {/* <VideoStrip /> */}

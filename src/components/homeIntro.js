@@ -10,7 +10,7 @@ const HomeIntro = () => {
         I was shooting documentary films back in 2010 at our church. On June
         2011, a church member asked if I could capture a wedding. I said, "Let's
         do it.", and the rest is history. Our approach is a little more{" "}
-        <span className="font-bold">timeless </span>
+        <span className="italic">timeless </span>
         than some; We create films driven by emotion and aim to capture the
         couple's essence on their special day.
       </p>

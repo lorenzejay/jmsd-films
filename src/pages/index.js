@@ -10,7 +10,12 @@ import VideoStrip from "../components/videoStrip"
 
 const IndexPage = () => (
   <Layout homePage={true}>
-    <SEO title="Los Angeles Wedding Photography and Cinematography Studio" />
+    <SEO
+      title="Los Angeles California Wedding Film Studio | JMSD Films"
+      description={
+        "Los Angeles Wedding Video studio. We create films driven by emotion and aim to capture the couple's essence on their special day."
+      }
+    />
     <VideoHero />
     <HomeIntro />
     <VideoGallery />

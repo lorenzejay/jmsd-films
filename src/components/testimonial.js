@@ -14,6 +14,7 @@ const Testimonial = () => {
             id
             author
             text
+            location
           }
         }
       }
@@ -40,14 +41,14 @@ const Testimonial = () => {
               <div className="max-w-sm md:max-w-md py-4 px-8 bg-white  rounded-lg my-20 mx-auto">
                 <div>
                   <h2 className="text-gray-800 text-3xl font-semibold">
-                    Wedding Films
+                    {node.location}
                   </h2>
                   <p className="mt-2 text-gray-600">{node.text}</p>
                 </div>
                 <div className="flex justify-end mt-4">
-                  <a href="#" className="text-xl font-medium text-gray-700">
+                  <p className="text-xl font-medium text-gray-700">
                     {node.author}
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
