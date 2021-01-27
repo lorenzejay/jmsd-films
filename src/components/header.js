@@ -3,7 +3,7 @@ import { Link as LinkG } from "gatsby"
 import PropTypes from "prop-types"
 import { FaBars } from "react-icons/fa"
 import styled from "styled-components"
-import logo from "../images/jmsdfilmslogo.png"
+import logo from "../images/jmsdlogocompressed.png"
 
 export const Nav = styled.header`
   //handle transitions here

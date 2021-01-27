@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const Pricing = () => {
   const data = useStaticQuery(graphql`
     query Pricing {
-      desktop: file(relativePath: { eq: "flowers.jpg" }) {
+      desktop: file(relativePath: { eq: "flowers-min.jpg" }) {
         childImageSharp {
           fluid(quality: 60, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
