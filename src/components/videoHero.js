@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import videoSrc from "../videos/film1.mp4"
+import videoSrc from "../videos/mainfilm.mp4"
 export const Hero = styled.section`
   height: 65vh;
   width: 100%;
