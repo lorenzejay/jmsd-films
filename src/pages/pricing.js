@@ -47,10 +47,10 @@ const Pricing = () => {
 
         <div className="text-gray-700 flex flex-col justify-center lg:flex-row md:justify-around py-10 md:mt-24">
           {data.allPackagesJson.nodes.map(item => (
-            <div key={item.id} className="text-center my-5">
+            <div key={item.id} className="text-center my-20 lg:my-10">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>
               <h6 className=" my-2">{item.price}</h6>
-              <hr className="w-1/4 mx-auto border-black mb-3" />
+              <hr className="w-1/4 mx-auto border-black my-5" />
               <ul>
                 {item.details.map((item, i) => (
                   <li key={i} className="my-3">

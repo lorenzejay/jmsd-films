@@ -69,13 +69,7 @@ const ContactUs = () => {
         required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
-      <input
-        type="text"
-        name="instagram"
-        placeholder="Instagram"
-        required
-        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
-      />
+
       <input
         type="text"
         placeholder="Location"
@@ -104,6 +98,13 @@ const ContactUs = () => {
         placeholder="Tell us your story"
         required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+      />
+      <input
+        type="text"
+        name="instagram"
+        placeholder="Instagram"
+        required
+        className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
       <button
         className="bg-gray-900 w-full rounded text-white py-1 uppercase"
