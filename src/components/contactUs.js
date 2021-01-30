@@ -89,8 +89,8 @@ const ContactUs = () => {
       >
         <option value="Video">Video</option>
         <option value="Indie">Indie</option>
-        <option value="Video">Video</option>
-        <option value="Hollywood">Hollywood</option>
+        <option value="Video">Cine - 4k</option>
+        <option value="Hollywood">Hollywood - 4k</option>
       </select>
 
       <textarea

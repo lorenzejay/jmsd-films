@@ -36,20 +36,20 @@ const Pricing = () => {
           imageSrc={imageData}
           title={"Packages"}
         />
-        <p className="leading-relaxed md:w-3/4 my-5 px-5 text-sm md:mx-auto md:mt-20 text-center md:text-2xl">
-          Our videography packages are focuses on delivering cinematic wedding
-          films that tell a story of your special day. The movies are 3-7
-          minutes long (depending on the package selected) and delivered within
-          90 days after the wedding date. We will cover your wedding for a
-          standard of 8 hours across all packages. If you would like to extend
-          us, we would happily arrange that. See below packages specifics.
+        <p className="leading-relaxed md:w-3/4 my-5 px-5 mt-20 text-sm md:mx-auto md:mt-20 text-center md:text-2xl">
+          Our packages focus on delivering cinematic wedding films that tell a
+          story of your special day. The movies are up to 3-7 minutes long
+          (depending on the package selected) and delivered within 90 days after
+          your wedding date. We cover your wedding for a standard of up to 8
+          hours across all packages. If you would like to extend us, we will
+          happily arrange that. See below packages specifics.
         </p>
 
         <div className="text-gray-700 flex flex-col justify-center lg:flex-row md:justify-around py-10 md:mt-24">
           {data.allPackagesJson.nodes.map(item => (
             <div key={item.id} className="text-center my-20 lg:my-10">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>
-              <h6 className=" my-2">{item.price}</h6>
+              <h6 className=" my-7 tracking-widest text-xl">{item.price}</h6>
               <hr className="w-1/4 mx-auto border-black my-5" />
               <ul>
                 {item.details.map((item, i) => (
