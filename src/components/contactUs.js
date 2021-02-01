@@ -81,7 +81,7 @@ const ContactUs = () => {
       .then(response => {
         handleServerResponse(
           true,
-          "Thank you, your message has been submitted."
+          "Thank you for submitting. We will get back to you soon."
         )
       })
       .catch(error => {
@@ -201,7 +201,6 @@ const ContactUs = () => {
         name="instagram"
         id="instagram"
         placeholder="Instagram"
-        required
         value={inputs.instagram}
         onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"

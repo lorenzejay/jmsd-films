@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import videoSrc from "../videos/mainfilm.mp4"
+import videoSrc from "../videos/superhero.mp4"
 export const Hero = styled.section`
   height: 65vh;
   width: 100%;
@@ -11,7 +11,7 @@ const VideoHero = () => {
     <Hero className="flex flex-col items-center text-white object-contain pb-0 mb-0 bg-black">
       <video
         style={{ zIndex: "2" }}
-        className="object-cover h-full w-full  relative "
+        className="object-cover h-full w-full relative"
         src={videoSrc}
         type="video/mp4"
         autoPlay

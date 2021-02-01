@@ -3,7 +3,7 @@ import { Link as LinkG } from "gatsby"
 import PropTypes from "prop-types"
 import { FaBars } from "react-icons/fa"
 import styled from "styled-components"
-import logo from "../images/jmsdlogocompressed.png"
+import logo from "../images/Logo5.jpg"
 
 export const Nav = styled.header`
   //handle transitions here
@@ -97,7 +97,7 @@ const Header = ({ siteTitle, homePage, toggle }) => {
             <img
               src={logo}
               alt="Logo"
-              className="w-44 h-44 items-center object-cover mt-5"
+              className="w-28 pb-2 items-center object-cover mt-5"
             />
           </NavLink>
 
