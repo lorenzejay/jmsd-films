@@ -13,7 +13,7 @@ const HomeIntro = () => {
       }
     }
   `)
-  console.log(data)
+  // console.log(data)
   return (
     <div className="my-24">
       <h1 className="text-4xl w-full mt-12 mb-6 text-center tracking-wider uppercase">

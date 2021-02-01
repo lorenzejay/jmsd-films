@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import axios from "axios"
 
 export const Form = styled.form`
   -webkit-appearance: none;
@@ -16,13 +17,90 @@ export const Form = styled.form`
 `
 
 const ContactUs = () => {
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  })
+  const [inputs, setInputs] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    date: todayDate,
+    location: "",
+    package: "Video",
+    message: "",
+    instagram: "",
+  })
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      })
+      setInputs({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        date: todayDate,
+        location: "",
+        package: "Video",
+        message: "",
+        instagram: "",
+      })
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      })
+    }
+  }
+
+  const handleOnChange = e => {
+    e.persist()
+    setInputs(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null },
+    })
+  }
+
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xyybvkbw",
+      data: inputs,
+    })
+      .then(response => {
+        handleServerResponse(
+          true,
+          "Thank you, your message has been submitted."
+        )
+      })
+      .catch(error => {
+        handleServerResponse(false, error.response.data.error)
+      })
+  }
+  // console.log(inputs)
   const todayDate = new Date().toISOString().slice(0, 10)
-  const [currentDate, setCurrentDate] = useState(todayDate)
-  const [preferedPackage, setPreferedPackage] = useState("")
+  // // const [currentDate, setCurrentDate] = useState(todayDate)
+  // // const [name, setName] = useState("")
+  // // const [email, setEmail] = useState("")
+  // // const [phoneNumber, setPhoneNumber] = useState("")
+  // // const [location, setLocation] = useState("")
+  // // const [package, setPackage] = useState("Video")
+  // // const [instagram, setInstagram] = useState("")
   return (
-    <Form className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12">
-      <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+    <Form
+      className="flex flex-col justify-center items-center my-12 w-3/4 mx-auto overflow-visible sm:w-7/12 md:w-4/12"
+      onSubmit={handleOnSubmit}
+    >
       {
         <>
           <h1 className="uppercase text-4xl text-center mb-12">Say Hello</h1>
@@ -39,22 +117,31 @@ const ContactUs = () => {
         type="text"
         placeholder="Name"
         name="name"
+        id="name"
         required
+        value={inputs.name}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
 
       <input
         type="email"
         placeholder="Email"
+        id="email"
         name="email"
         required
+        value={inputs.email}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
       <input
         type="text"
         placeholder="Phone Number"
         required
-        name="Phone Number"
+        name="phoneNumber"
+        id="phoneNumber"
+        value={inputs.phoneNumber}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
 
@@ -63,9 +150,10 @@ const ContactUs = () => {
       </label>
       <input
         type="date"
-        onChange={e => setCurrentDate(e.target.value)}
-        value={currentDate}
         name="date"
+        id="date"
+        onChange={handleOnChange}
+        value={inputs.date}
         required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
@@ -73,11 +161,14 @@ const ContactUs = () => {
       <input
         type="text"
         placeholder="Location"
-        name="Location"
+        name="location"
+        id="location"
         required
+        value={inputs.location}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       />
-      <label htmlFor="cars" className="mr-auto">
+      <label htmlFor="package" className="mr-auto">
         Choose a package:
       </label>
 
@@ -85,12 +176,14 @@ const ContactUs = () => {
         name="package"
         id="package"
         required
+        value={inputs.package}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
       >
         <option value="Video">Video</option>
         <option value="Indie">Indie</option>
-        <option value="Video">Cine - 4k</option>
-        <option value="Hollywood">Hollywood - 4k</option>
+        <option value="Cine - 4k">Cine - 4k</option>
+        <option value="Hollywood - 4k">Hollywood - 4k</option>
       </select>
 
       <textarea
@@ -98,20 +191,36 @@ const ContactUs = () => {
         placeholder="Tell us your story"
         required
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full "
+        name="message"
+        id="message"
+        value={inputs.message}
+        onChange={handleOnChange}
       />
       <input
         type="text"
         name="instagram"
+        id="instagram"
         placeholder="Instagram"
         required
+        value={inputs.instagram}
+        onChange={handleOnChange}
         className="px-3 py-3 placeholder-gray-800 text-gray-700 relative bg-white text-sm outline-none focus:outline-none  w-full"
       />
       <button
         className="bg-gray-900 w-full rounded text-white py-1 uppercase"
         type="submit"
+        disabled={status.submitting}
       >
-        Submit
+        {!status.submitting
+          ? !status.submitted
+            ? "Submit"
+            : "Submitted"
+          : "Submitting..."}
       </button>
+      {status.info.error && (
+        <div className="error">Error: {status.info.msg}</div>
+      )}
+      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
     </Form>
   )
 }
