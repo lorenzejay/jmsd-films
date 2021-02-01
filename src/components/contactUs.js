@@ -17,6 +17,7 @@ export const Form = styled.form`
 `
 
 const ContactUs = () => {
+  const todayDate = new Date().toISOString().slice(0, 10)
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
@@ -88,7 +89,6 @@ const ContactUs = () => {
       })
   }
   // console.log(inputs)
-  const todayDate = new Date().toISOString().slice(0, 10)
   // // const [currentDate, setCurrentDate] = useState(todayDate)
   // // const [name, setName] = useState("")
   // // const [email, setEmail] = useState("")
