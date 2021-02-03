@@ -29,6 +29,7 @@ const Pricing = () => {
           title
           price
           details
+          isMostPopular
         }
       }
     }
@@ -58,7 +59,8 @@ const Pricing = () => {
           {data.allPackagesJson.nodes.map(item => (
             <div key={item.id} className="text-center my-20 lg:my-10">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>
-              <h6 className=" my-7 tracking-widest text-xl">{item.price}</h6>
+              {item.isMostPopular && <p>(Most Popular)</p>}
+              <h6 className=" mt-7 tracking-widest text-xl">{item.price}</h6>
               <hr className="w-1/4 mx-auto border-black my-5" />
               <ul>
                 {item.details.map((item, i) => (

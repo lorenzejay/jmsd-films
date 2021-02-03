@@ -1,7 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Indie (Most popular)",
+    "title": "Video",
+    "isMostPopular": false,
+    "price": 2000,
+    "details": [
+      "Monday - Thursday",
+      "1 Cinematographer",
+      "3 - 5 Minute Highlight Film"
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "Indie ",
+    "isMostPopular": true,
     "price": 3000,
     "details": [
       "2 Cinematographers",
@@ -11,8 +24,9 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Film - 4k",
+    "isMostPopular": false,
     "price": 3450,
     "details": [
       "2 Cinematographers",
@@ -22,8 +36,9 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Hollywood - 4k",
+    "isMostPopular": false,
     "price": 4000,
     "details": [
       "2 Cinematographers",

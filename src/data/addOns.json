@@ -20,18 +20,6 @@
   },
   {
     "id": 3,
-    "title": "Documentary Film Package",
-    "price": "1800",
-    "description": [
-      "This is a Coverage ONLY + Edit of your entire wedding",
-      "Up to 8 Hours of Filming (Getting Ready - Reception)",
-      "High-Definition Multi-Audio and Video Capturing",
-      "Documentary Film (Up to 2 hours)",
-      "30 Days Editing Process."
-    ]
-  },
-  {
-    "id": 4,
     "title": "Additional Cinematographer",
     "price": "500",
     "description": [
@@ -39,7 +27,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Additional Hours",
     "price": "300 per hour",
     "description": ["Do you need more time?"]

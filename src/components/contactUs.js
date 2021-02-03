@@ -115,7 +115,7 @@ const ContactUs = () => {
 
       <input
         type="text"
-        placeholder="Name"
+        placeholder="Couple's Full Name"
         name="name"
         id="name"
         required

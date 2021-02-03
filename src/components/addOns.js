@@ -71,11 +71,18 @@ const AddOns = () => {
           <AddOnItem key={item.id} number={item.id} className="p-10  w-full">
             <div className="addoncontent flex flex-col">
               <h3 className="text-3xl">{item.title}</h3>
-              <p className=" my-5 lg:text-xl tracking-widest">+{item.price}</p>
+              <p className=" my-5 text-lg lg:text-xl tracking-widest">
+                + {item.price}
+              </p>
 
               <ul>
                 {item.description.map((x, i) => (
-                  <li key={i} className="bullets  leading-loose text-lg">
+                  <li
+                    key={i}
+                    className={`leading-loose text-lg ${
+                      item.description.length > 1 ? " bullets" : "list-none"
+                    }`}
+                  >
                     {x}
                   </li>
                 ))}
