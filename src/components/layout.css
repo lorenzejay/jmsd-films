@@ -12,3 +12,7 @@
 .player {
   position: "" !important;
 }
+
+.bullets::before {
+  content: "• ";
+}

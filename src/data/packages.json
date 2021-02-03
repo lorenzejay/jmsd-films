@@ -1,47 +1,37 @@
 [
   {
     "id": 1,
-    "title": "Video",
-    "price": 2000,
+    "title": "Indie (Most popular)",
+    "price": 3000,
     "details": [
-      "Offered Monday - Thursday",
-      "1 Cinematographer",
-      "3-5 Minute Highlight Film"
+      "2 Cinematographers",
+      "Highlight Film (3 - 5 mins)",
+      "Ceremony and Toast Film",
+      "Digital Download"
     ]
   },
   {
     "id": 2,
-    "title": "Indie",
-    "price": 3000,
+    "title": "Film - 4k",
+    "price": 3450,
     "details": [
       "2 Cinematographers",
-      "Short Film (3-5 minutes)",
-      "Ceremony & Toast Film",
-      "1 Minute Social Media Teaser",
+      "UHD/4K Video Coverage",
+      "Feature Film (15 – 16 mins)",
       "Digital Download"
     ]
   },
   {
     "id": 3,
-    "title": "Cine - 4k",
-    "price": 3450,
-    "details": [
-      "2 Cinematographers",
-      "Feature Film (10 - 15 minutes)",
-      "1 Minute Social Media Teaser",
-      "Digital Download"
-    ]
-  },
-  {
-    "id": 4,
     "title": "Hollywood - 4k",
     "price": 4000,
     "details": [
       "2 Cinematographers",
-      "Short Film (5-7 minutes)",
-      "Documentary Film (45 minutes - 1 hour)",
-      "1 Minute Social Media Teaser",
-      "Digital Download and USB Delivery"
+      "UHD/4K Video Coverage",
+      "Highlight Film (5 - 7 mins)",
+      "1.5 - hour Documentary Film",
+      "Social Media Teaser",
+      "Digital Download"
     ]
   }
 ]

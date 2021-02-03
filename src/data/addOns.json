@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Social Media Teaser",
+    "price": "300",
+    "description": [
+      "A one-minute teaser for your loved ones to see on Instagram/Facebook. Delivered one week after the wedding."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Engagement Session",
+    "price": "1100",
+    "description": [
+      "Up to 4 hours coverage",
+      "2 Cinematographers",
+      "Must be booked at least 2 months prior to Wedding Day. Additional payment of $300 if under 2 months of booking.",
+      "Projector and Screen will be provided by couple or the venue for presentation."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Documentary Film Package (This is a Coverage ONLY + Edit of your entire wedding)",
+    "price": "1800",
+    "description": [
+      "Up to 8 Hours of Filming (Getting Ready - Reception)",
+      "High-Definition Multi-Audio and Video Capturing",
+      "Documentary Film (Up to 2 hours)",
+      "30 Days Editing Process."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Additional Cinematographer",
+    "price": "500",
+    "description": [
+      "Do you need more angles for your film? An additional Cinematographer can get that for you."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Additional Hours",
+    "price": "300 per hour",
+    "description": ["Do you need more time?"]
+  }
+]

@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
+import AddOns from "../components/addOns"
 import StyledBackgroundSection from "../components/imageHero"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,6 +9,13 @@ const Pricing = () => {
   const data = useStaticQuery(graphql`
     query Pricing {
       desktop: file(relativePath: { eq: "flowers-min.jpg" }) {
+        childImageSharp {
+          fluid(quality: 60, maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      flowers: file(relativePath: { eq: "addon.jpg" }) {
         childImageSharp {
           fluid(quality: 60, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -26,6 +34,7 @@ const Pricing = () => {
     }
   `)
   const imageData = data.desktop.childImageSharp.fluid
+  const imageData2 = data.flowers.childImageSharp.fluid
   // console.log(data.allPackagesJson.nodes)
   return (
     <Layout>
@@ -66,6 +75,15 @@ const Pricing = () => {
             </div>
           ))}
         </div>
+
+        {/* <div className="bg-gray-500 h-48 w-full"> */}
+        <StyledBackgroundSection
+          className="h-48 w-full"
+          imageSrc={imageData2}
+          title={"Add-Ons"}
+        />
+        {/* </div> */}
+        <AddOns />
       </div>
     </Layout>
   )
