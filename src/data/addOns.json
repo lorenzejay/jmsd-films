@@ -4,7 +4,7 @@
     "title": "Social Media Teaser",
     "price": "300",
     "description": [
-      "A one-minute teaser for your loved ones to see on Instagram/Facebook. Delivered one week after the wedding."
+      "A one-minute teaser for your loved ones to see on Instagram / Facebook. Delivered one week after the wedding."
     ]
   },
   {
@@ -20,9 +20,10 @@
   },
   {
     "id": 3,
-    "title": "Documentary Film Package (This is a Coverage ONLY + Edit of your entire wedding)",
+    "title": "Documentary Film Package",
     "price": "1800",
     "description": [
+      "This is a Coverage ONLY + Edit of your entire wedding",
       "Up to 8 Hours of Filming (Getting Ready - Reception)",
       "High-Definition Multi-Audio and Video Capturing",
       "Documentary Film (Up to 2 hours)",
