@@ -3,11 +3,12 @@
     "id": 1,
     "title": "Video",
     "isMostPopular": false,
-    "price": 2000,
+    "price": 2500,
     "details": [
       "Monday - Thursday",
-      "1 Cinematographer",
-      "3 - 5 Minute Highlight Film"
+      "2 Cinematographer",
+      "Highlift Film (3 - 5 mins)",
+      "30 Days Editing Process"
     ]
   },
 
