@@ -30,6 +30,7 @@ const Pricing = () => {
           price
           details
           isMostPopular
+          offeredWeekdays
         }
       }
     }
@@ -60,6 +61,7 @@ const Pricing = () => {
             <div key={item.id} className="text-center my-20 lg:my-10">
               <h1 className="font-bold text-3xl uppercase">{item.title}</h1>
               {item.isMostPopular && <p>(Most Popular)</p>}
+              {item.offeredWeekdays && <p>(Monday - Thursday)</p>}
               <h6 className=" mt-7 tracking-widest text-xl">{item.price}</h6>
               <hr className="w-1/4 mx-auto border-black my-5" />
               <ul>

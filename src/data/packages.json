@@ -3,10 +3,10 @@
     "id": 1,
     "title": "Video",
     "isMostPopular": false,
+    "offeredWeekdays": true,
     "price": 2500,
     "details": [
-      "Monday - Thursday",
-      "2 Cinematographer",
+      "2 Cinematographers",
       "Highlift Film (3 - 5 mins)",
       "30 Days Editing Process"
     ]
@@ -16,6 +16,7 @@
     "id": 2,
     "title": "Indie ",
     "isMostPopular": true,
+    "offeredWeekdays": false,
     "price": 3000,
     "details": [
       "2 Cinematographers",
@@ -28,7 +29,8 @@
     "id": 3,
     "title": "Film - 4k",
     "isMostPopular": false,
-    "price": 3450,
+    "offeredWeekdays": false,
+    "price": 3500,
     "details": [
       "2 Cinematographers",
       "UHD/4K Video Coverage",
@@ -40,12 +42,13 @@
     "id": 4,
     "title": "Hollywood - 4k",
     "isMostPopular": false,
+    "offeredWeekdays": false,
     "price": 4000,
     "details": [
       "2 Cinematographers",
       "UHD/4K Video Coverage",
       "Highlight Film (5 - 7 mins)",
-      "1.5 - hour Documentary Film",
+      "1.5 hour Documentary Film",
       "Social Media Teaser",
       "Digital Download"
     ]
